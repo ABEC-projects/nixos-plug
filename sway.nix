@@ -1,4 +1,4 @@
-{ lib, config, ... }@args:
+{ lib, config, pkgs, ... }@args:
 let
   cfg = config.plug.sway;
   pluglib = import ./lib.nix args;

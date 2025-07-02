@@ -1,6 +1,5 @@
-{ lib, config, pkgs, ... }: rec {
-  mkIf = cond: lib.mkIf (config.plug.enable && cond);
-  getScript = name: "${scripts.${name}}/bin/${name}";
+{pkgs, ...}: name: 
+let
   scripts = {
     magick_convert = pkgs.writeShellApplication {
       name = "magick_convert";
@@ -18,4 +17,5 @@
       text = builtins.readFile ./assets/scripts/cpf;
     };
   };
-}
+in
+"${scripts.${name}}/bin/${name}"

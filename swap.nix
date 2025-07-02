@@ -1,4 +1,4 @@
-{ lib, config, ... }@args:
+{ lib, config, pkgs, ... }@args:
 let
   cfg = config.plug.swap;
   pluglib = import ./lib.nix args;
@@ -16,7 +16,7 @@ in
   config = pluglib.mkIf cfg.enable {
     swapDevices = [
       {
-        device = "/var/lib/swapfile";
+        device = "/swapfile";
         size = cfg.size;
       }
     ];

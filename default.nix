@@ -1,7 +1,7 @@
 {
   lib,
   config,
-  options,
+  pkgs,
   ...
 }:
 {
@@ -16,6 +16,9 @@
     ./locales.nix
     ./stylix.nix
     ./sway.nix
+    ./zapret.nix
+    ./i3.nix
+    ./yazi.nix
   ];
 
   options.plug.enable = lib.mkEnableOption "plug";
@@ -25,6 +28,5 @@
       "nix-command"
       "flakes"
     ];
-    assertions = [ ];
   };
 }

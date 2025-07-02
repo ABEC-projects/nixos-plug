@@ -7,6 +7,8 @@
 {
   imports = [
     ./sway.nix
+    ./i3.nix
+    ./yazi.nix
   ];
     
   config = {

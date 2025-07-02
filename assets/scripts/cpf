@@ -1,0 +1,6 @@
+files=()
+for f in "$@"; do
+    files+=("file://${f} ")
+done
+echo "${files[@]}" | sed 's/ file:\/\//\r\nfile:\/\//g' | xclip -i -sel c -t text/plain
+echo "${files[@]}" | sed 's/ file:\/\//\r\nfile:\/\//g' | xclip -i -sel c -t text/uri-list

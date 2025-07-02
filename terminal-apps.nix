@@ -4,7 +4,6 @@ let
 in
 {
   options = {
-
   };
   config = lib.mkMerge [
   {
@@ -13,6 +12,7 @@ in
       lsd
       bat
       lazygit
+      gdu
     ];
   }
   ];
