@@ -19,6 +19,8 @@
     ./zapret.nix
     ./i3.nix
     ./yazi.nix
+    ./xserver.nix
+    ./hibernation.nix
   ];
 
   options.plug.enable = lib.mkEnableOption "plug";

@@ -16,7 +16,7 @@ in
   config = pluglib.mkIf cfg.enable {
     swapDevices = [
       {
-        device = "/swapfile";
+        device = "/var/lib/swapfile";
         size = cfg.size;
       }
     ];

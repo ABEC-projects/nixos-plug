@@ -12,5 +12,7 @@ in
     services.xserver.windowManager.i3 = {
       enable = true;
     };
+    plug.xserver.enable = true;
+    environment.pathsToLink = [ "/libexec" ];
   };
 }

@@ -37,7 +37,7 @@ rec {
           "${modifier}+v" = "split v";
           "${modifier}+f" = "fullscreen toggle";
           "${modifier}+w" = "layout tabbed";
-          "${modifier}+r" = "layout toggle spleet";
+          "${modifier}+r" = "layout toggle split";
 
           "${modifier}+Shift+space" = "floating toggle";
           "${modifier}+colon" = "focus mode_toggle";

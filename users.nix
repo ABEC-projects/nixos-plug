@@ -7,6 +7,7 @@
 let
   cfg = config.plug.user;
   pluglib = import ./lib.nix args;
+  inherit (lib) mkDefault;
 in
 {
 
@@ -55,7 +56,7 @@ in
       home-manager.users.${cfg.name} = import ./home-manager/home.nix;
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.backupFileExtension = "back~";
+      home-manager.backupFileExtension = mkDefault "back~";
     })
   ];
 }
