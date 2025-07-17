@@ -24,9 +24,9 @@ in
             type = lib.types.package;
             default = pkgs.fish;
           };
-          moreGroups = lib.mkOption = {
+          moreGroups = lib.mkOption {
             type = lib.types.listOf lib.types.str;
-            exaple = [ "cool_group" ];
+            example = [ "cool_group" ];
             description = "Extra extraGroups";
             default = [];
           };
