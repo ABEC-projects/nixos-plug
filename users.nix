@@ -24,6 +24,12 @@ in
             type = lib.types.package;
             default = pkgs.fish;
           };
+          moreGroups = lib.mkOption = {
+            type = lib.types.listOf lib.types.str;
+            exaple = [ "cool_group" ];
+            description = "Extra extraGroups";
+            default = [];
+          };
           enableHomeManager = lib.mkOption {
             type = bool;
             default = true;
@@ -45,7 +51,7 @@ in
             "networkmanager"
             "wheel"
             "input"
-          ];
+          ] ++ cfg.moreGroups;
           description = "Main user of this pc";
           isNormalUser = true;
         };
