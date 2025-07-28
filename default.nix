@@ -21,6 +21,7 @@
     ./yazi.nix
     ./xserver.nix
     ./hibernation.nix
+    ./copyparty.nix
   ];
 
   options.plug.enable = lib.mkEnableOption "plug";

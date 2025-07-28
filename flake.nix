@@ -11,20 +11,23 @@
     };
     nix-alien.url = "github:/thiagokokada/nix-alien";
     nix-alien.inputs.nixpkgs.follows = "nixpkgs";
+    copyparty.url = "github:9001/copyparty";
   };
 
   outputs =
-    {  self, home-manager, stylix, nixpkgs, nix-alien, ... }:
+    {  self, home-manager, stylix, nixpkgs, nix-alien, copyparty, ... }:
     {
       nixosModules.default = {
         imports = [
           ./default.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
+          copyparty.nixosModules.default
           {
             environment.systemPackages = [
               nix-alien.packages.x86_64-linux.nix-alien
             ];
+            nixpkgs.overlays = [ copyparty.overlays.default ];
             programs.nix-ld.enable = true;
           }
         ];
