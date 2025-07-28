@@ -17,6 +17,10 @@ in
       desktopManager = {
         xterm.enable = false;
       };
+      xkb = {
+        layout = "us, ru";
+        variant = "";
+      };
     };
     services.libinput = {
       enable = mkDefault true;
