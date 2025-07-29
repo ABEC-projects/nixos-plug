@@ -18,9 +18,7 @@ in
     services.zapret = {
       enable = true;
       params = mkDefault [
-        "--dpi-desync=multidisorder --dpi-desync-split-pos=1,sniext+1,host+1,midsld-2,midsld,midsld+2,endhost-1 --new"
-        "-dpi-desync=multidisorder --dpi-desync-split-pos=1,sniext+1,host+1,midsld-2,midsld,midsld+2,endhost-1 --new"
-        "--dpi-desync=fake --dpi-desync-ttl=2"
+        "--dpi-desync=fake --dpi-desync-fooling=badseq"
       ];
     };
     environment.systemPackages = [ pkgs.zapret ];
