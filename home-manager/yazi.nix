@@ -9,7 +9,7 @@ in
     programs.yazi = {
       enable = true;
       keymap = {
-        manager.append_keymap = [
+        mgr.append_keymap = [
           {
             on = [
               "c"
